@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Axioms",
+        "repositoryURL": "https://github.com/jemmons/Axioms",
+        "state": {
+          "branch": null,
+          "revision": "ae1684a2fbee49ea53161e507aadc58df84df0a3",
+          "version": "0.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

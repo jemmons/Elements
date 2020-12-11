@@ -1,16 +1,5 @@
 import SwiftUI
-
-
-import SwiftUI
-
-
-extension CGPoint: ExpressibleByArrayLiteral {
-  public init(arrayLiteral elements: CGFloat...) {
-    precondition(elements.count == 2)
-    self.init(x: elements[0], y: elements[1])
-  }
-  
-}
+import Axioms
 
 
 public struct Graduation: Shape {
