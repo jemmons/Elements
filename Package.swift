@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "Elements",
   platforms: [
-    .macOS(.v10_15),
+    .macOS(.v11),
     .iOS(.v13)
   ],
   products: [
@@ -16,7 +16,7 @@ let package = Package(
       targets: ["Elements"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/jemmons/Axioms", from: "0.0.1"),
+    .package(url: "https://github.com/jemmons/Axioms", from: "0.0.3"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.

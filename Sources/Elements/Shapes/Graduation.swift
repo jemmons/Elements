@@ -3,9 +3,16 @@ import Axioms
 
 
 public struct Graduation: Shape {
-  let divisions: Int
-  let subdivisions: Int
-
+  private let divisions: Int
+  private let subdivisions: Int
+  
+  
+  public init(divisions someDivisions: Int, subdivisions someSubdivisions: Int) {
+    divisions = someDivisions
+    subdivisions = someSubdivisions
+  }
+  
+  
   public func path(in rect: CGRect) -> Path {
     var path = Path()
     // Axis
@@ -32,8 +39,17 @@ public struct Graduation: Shape {
 
 public struct Graduation_Preview: PreviewProvider {
   public static var previews: some View {
-    Graduation(divisions: 20, subdivisions: 5)
-      .stroke(lineWidth: 1.0)
+    Group {
+      Graduation(divisions: 15, subdivisions: 1)
+        .stroke(lineWidth: 1.0)
+      Graduation(divisions: 15, subdivisions: 2)
+        .stroke(lineWidth: 1.0)
+      Graduation(divisions: 15, subdivisions: 3)
+        .stroke(lineWidth: 1.0)
+      Graduation(divisions: 15, subdivisions: 5)
+        .stroke(lineWidth: 1.0)
+    }
+    .previewLayout(.fixed(width: 400, height: 100))
   }
 }
 
