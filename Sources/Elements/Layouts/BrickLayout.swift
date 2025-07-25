@@ -14,6 +14,9 @@ public struct BrickLayout: Layout {
     
     
     public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        guard subviews.count > 0 else {
+            return .zero
+        }
         
         var proposedSize = proposal.replacingUnspecifiedDimensions()
         
